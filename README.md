@@ -4,7 +4,6 @@
 
 Our method explicitly integrates protein node importance and herb-specific data to prioritize TCM formula components, identify bioactive compounds, and clarify mechanisms of action — illustrated with a case study on Parkinson’s disease.
 
----
 
 ## Requirements
 
@@ -15,7 +14,6 @@ Our method explicitly integrates protein node importance and herb-specific data 
 - jupyter  
 - matplotlib  
 
----
 
 ## Code Overview
 

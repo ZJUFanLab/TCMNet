@@ -32,3 +32,6 @@ Functions include:
 - Calculation of target coverage, Jaccard similarity, network proximity (weighted/unweighted)  
 - Statistical significance evaluation (Z-scores, random sampling)  
 
+**docking-result-by-boltz-2/**  
+This folder contains the docking results by boltz-2 model 
+

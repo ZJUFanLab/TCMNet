@@ -1,6 +1,6 @@
-# TCMPrime
+# TCMNet
 
-**TCMprime: Node-Weighted Network Pharmacology for TCM Formula Optimization**
+**TCMNet: An AI-driven strategy for optimizing traditional Chinese medicine formulas**
 
 Our method explicitly integrates protein node importance and herb-specific data to prioritize TCM formula components, identify bioactive compounds, and clarify mechanisms of action — illustrated with a case study on Parkinson’s disease.
 

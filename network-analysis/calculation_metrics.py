@@ -4,7 +4,6 @@ import numpy as np
 from scipy.stats import spearmanr
 from network_utilities import get_degree_binning, pick_random_nodes_matching_selected
 
-# ─── 缓存结构 ─────────────────────────────
 _distance_cache = {}
 
 def weighted_shortest_path(G, src, tgt, w_src, w_tgt):
@@ -70,7 +69,6 @@ def separation_zscore(G, drug, disease, drug_w, disease_w,
     return (sep_obs - mu)/sd if sd else np.nan
 
 def proximity_weighted(G, A, B, wA, wB):
-    # 新增：计算所有 A->B 的最短路径，乘以 ws*wt，再归一化
     total_weighted_distance = 0.0  
     total_weight = 0.0  
 

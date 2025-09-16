@@ -6,26 +6,6 @@ from network_utilities import get_degree_binning, pick_random_nodes_matching_sel
 
 _distance_cache = {}
 
-def weighted_shortest_path(G, src, tgt, w_src, w_tgt):
-    vals = []
-    for s in src:
-        if s not in G: continue
-        if s not in _distance_cache:
-            _distance_cache[s] = nx.single_source_shortest_path_length(G, s)
-        dist_s = _distance_cache[s]
-        ws = w_src.get(s, 1.0)
-        best = np.inf
-        for t in tgt:
-            if s == t: continue  
-            d = dist_s.get(t)
-            if d is None: continue
-            wt = w_tgt.get(t, 1.0)
-            if ws == 0 or wt == 0: continue
-            best = min(best, d/(ws*wt))
-        if best < np.inf:
-            vals.append(best)
-    return np.mean(vals) if vals else np.nan
-
 def calculate_separation(G, drug, disease, drug_w, disease_w):
 
     dHD = proximity_weighted(G, drug, disease, drug_w, disease_w)  

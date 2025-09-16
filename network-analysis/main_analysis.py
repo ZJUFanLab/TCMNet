@@ -104,8 +104,6 @@ def main():
                 # Define the four weight scenarios
                 scen_cfg = {
                     'both_weights':  (fw,   dw),
-                    'disease_only':  ({k:1.0 for k in fw}, dw),
-                    'drug_only':     (fw,   {k:1.0 for k in dw}),
                     'no_weight':     ({k:1.0 for k in fw}, {k:1.0 for k in dw})
                 }
 

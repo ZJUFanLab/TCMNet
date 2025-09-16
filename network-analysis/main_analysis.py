@@ -141,9 +141,8 @@ def main():
                             val, _ = func(G, drug_nodes, dis_nodes, wA, wB,
                                           perturb=0.1,
                                           iterations=args.iterations)
-                        elif m == 'spearman_weight_sensitivity': 
-                            # 针对每种权重分别做一次敏感性分析并单独写入文件
-                            for typ, wm in [('drug', wA), ('disease', wB)]: #药材/疾病
+                        elif m == 'spearman_weight_sensitivity':   
+                            for typ, wm in [('drug', wA), ('disease', wB)]: 
                                 corrs = func(wm)
                                 for idx, corr in enumerate(corrs):
                                     spearwr.writerow([fn, sc, typ, idx / (len(corrs)-1 if len(corrs)>1 else 1), corr])

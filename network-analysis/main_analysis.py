@@ -36,7 +36,11 @@ def load_weights(path):
 
 def main():
     args = parse_args()
-
+    SEED = 42  
+    random.seed(SEED)
+    np.random.seed(SEED)
+    print(f"Random seed set to {SEED} for reproducibility.")
+    
     # Available metrics and their callables
     allm = {
         'separation':            calculate_separation,
@@ -151,8 +155,8 @@ def main():
                         if val is not None:
                             wr.writerow([fn, sc, m, val])
 
-    print("✅ Done, results saved to", args.out)
-    print("✅ Spearman weight sensitivity saved to", args.spearman_out) 
+    print("Done, results saved to", args.out)
+    print("Spearman weight sensitivity saved to", args.spearman_out) 
 
 if __name__ == '__main__':
     main() 
